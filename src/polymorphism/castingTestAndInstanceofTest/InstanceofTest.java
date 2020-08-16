@@ -1,4 +1,4 @@
-package castingTestAndInstanceofTest;
+package polymorphism.castingTestAndInstanceofTest;
 
 /**
  * 참조변수 형변환의 핵심 : 참조하는 인스턴스(객체)가 무엇인가

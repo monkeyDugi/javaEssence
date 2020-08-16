@@ -1,4 +1,4 @@
-package castingTestAndInstanceofTest;
+package polymorphism.castingTestAndInstanceofTest;
 
 public class CastingTest1 {
 

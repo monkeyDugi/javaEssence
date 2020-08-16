@@ -1,4 +1,4 @@
-package polyArgumentTest3;
+package polymorphism.polyArgumentTest3;
 
 import java.util.Vector;
 
@@ -127,7 +127,7 @@ class Buyer {
 
         // 구매 금액 합계와 구매 목록을 만든다.
         for (int i = 0; i < item.size(); i++) {
-            Product p = (Product)item.get(i);
+            Product p = (Product)item.get(i); // 반환 타입이 Object 타입이기 때문에 형변환이 가능하다.
 
             sum += p.price;
             itemList += (i==0) ? "" + p : ", " + p;

@@ -1,4 +1,4 @@
-package bindingTest2;
+package polymorphism.bindingTest2;
 
 // 조상, 자손의 인스턴스 변수를 선택하여 사용하기 위해서 super(조상), this(자손)을 사용한다.
 public class BindingTest2 {

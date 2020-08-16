@@ -1,4 +1,4 @@
-package castingTestAndInstanceofTest;
+package polymorphism.castingTestAndInstanceofTest;
 
 /**
  * FireEngine과 Ambulance는 아무런 관계가 없다.
