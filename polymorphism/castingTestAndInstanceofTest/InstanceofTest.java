@@ -1,3 +1,5 @@
+package castingTestAndInstanceofTest;
+
 /**
  * 참조변수 형변환의 핵심 : 참조하는 인스턴스(객체)가 무엇인가
  * instanceof : 참조변수가 참조하고 있는 인스턴스(객체)를 확인하여, 형변환 하여도 되는지 확인하기 위해 사용한다.

@@ -13,4 +13,36 @@
 
  - 자손타입 <- 조상타입(Down-casting) : 형변환 생략불가
 
-## 핵심은 형변환이 되느냐 안되느냐가 아니라, 참조하는 인스턴스(객체)가 무엇이냐가 중요한 것 이다. 
+## 핵심은 형변환이 되느냐 안되느냐가 아니라, 참조하는 인스턴스(객체)가 무엇이냐가 중요한 것 이다.
+
+## 특징
+1. 다형성의 기본 특징
+```java 
+(조상)TV tv = (자식)new SmartTv();      // 가능
+(자식)SmartTv smartTv = new Tv();(조상) // 불가
+```
+
+2. 참조변수의 형변환
+```java
+(자식)SmartTv smartTv = (SmartTv)(new Tv();(조상) // 형변환으로 인해 가능
+```
+
+
+3. instanceof 연산자
+- 형변환 가능여부를 체크
+- 즉, 조상, 자존 관계인지 체크
+
+4. 매개변수의 다형성
+- 예를 들자면, 이미 정의되어 있는 **PrintStream, String** 클래스를 보면 알 수 있다.
+```java
+// 매개변수 타입이 Object이므로 모든 타입을 받을 수 있고, valueOf를 이용해 null 또는 toString을 return 해준다.
+public void print(Object obj) {
+        write(String.valueOf(obj));
+    }
+
+public static String valueOf(Object obj) {
+    return (obj == null) ? "null" : obj.toString();
+}
+```
+
+  
