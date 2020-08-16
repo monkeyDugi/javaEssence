@@ -1,7 +1,7 @@
-package abstracttt.abstractClassAndAbstractMethod;
+package abstractTest;
 
 // 추상 클래스 사용법에 대해서 알아보기
-public class AbstractMake1 {
+public class AbstractMake {
 
     public static void main(String[] args) {
         // 추상화 전

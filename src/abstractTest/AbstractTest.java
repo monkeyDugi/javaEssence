@@ -1,7 +1,7 @@
-package abstracttt.abstractClassAndAbstractMethod;
+package abstractTest;
 
 // 추상 클래스와 추상 메서드란 무엇인가?
-public class AbstractClassAndAbstractMethod {
+public class AbstractTest {
 
     public static void main(String[] args) {
         Player p = new AudioPlayer();
