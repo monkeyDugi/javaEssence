@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 
 /**
- * Arrays.sort()에서 알아서 정렬을 해주는 것 같지만 실체는
+ * Arrays.sort()에서 알아서 정렬을 해주는 것 같지만 실체는 Comparable의 구현에 의해 정렬이 된 것 이다.
  */
 public class ComparatorAndComparableTest {
 
