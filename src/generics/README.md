@@ -39,7 +39,7 @@ class Box<T> { // 제네릭 타입 T를 선언
 - 메서드에 정의된 타입 매개변수는 클래스에 정의된 타입 매개변수와 전혀 무관(제네릭 메서드는 클래스가 아닌 클래스에도 정의 가능, **static <T> void**)
 - static 메서드에는 원래 타입 매개변수가 사용 불가하지만, 메서드에(static <T>)를 선언하고 사용이 가능 
 ```java
-static <T> void sorrt (List<T> list, Comparator<? super T> c)
+static <T> void sort (List<T> list, Comparator<? super T> c)
 ```
 - FruitBoxEx3.java에서 makeJuice()를 와일드 카드로 사용 했었다. 왜냐? static에는 타입 매개변수 사용이 불가능 하기 때문에
 하지만
