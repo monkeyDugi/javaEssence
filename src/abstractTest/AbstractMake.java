@@ -1,55 +1,55 @@
 package abstractTest;
 
-// 추상 클래스 사용법에 대해서 알아보기
+// 異붿긽 �겢�옒�뒪 �궗�슜踰뺤뿉 ���빐�꽌 �븣�븘蹂닿린
 public class AbstractMake {
 
     public static void main(String[] args) {
-        // 추상화 전
+        // 異붿긽�솕 �쟾
 //        Marine marine = new Marine();
-        // 추상화 하지 않고 바로 구현으로 사용하면 Maring, Tank, DropShip 모두 각각
-        // move와 stop을 만들어주어야 하고, 까먹게 될 경우가 발생할 수 있다는 단점이 있다.
+        // 異붿긽�솕 �븯吏� �븡怨� 諛붾줈 援ы쁽�쑝濡� �궗�슜�븯硫� Maring, Tank, DropShip 紐⑤몢 媛곴컖
+        // move�� stop�쓣 留뚮뱾�뼱二쇱뼱�빞 �븯怨�, 源뚮㉨寃� �맆 寃쎌슦媛� 諛쒖깮�븷 �닔 �엳�떎�뒗 �떒�젏�씠 �엳�떎.
 //        marine.move(1, 2);
 //        marine.stop();
 
-        // 추상화 후
+        // 異붿긽�솕 �썑
         Unit[] group = new Unit[3];
         group[0] = new Marine();
         group[1] = new Tank();
         group[2] = new DropShip();
 
         for (int i = 0; i < group.length; i++) {
-            // 모든 유닛의 자표를 100, 200으로 설정
+            // 紐⑤뱺 �쑀�떅�쓽 �옄�몴瑜� 100, 200�쑝濡� �꽕�젙
             group[i].move(100, 200);
-            group[i].stop();
+            group[i].stop();//dddddddddd
         }
     }
 }
 
-// 추상화 클래스로 공통기능 추출
-// 모든 유닛은 이동해야하는 좌표가 다르기 때문에 추상화
-// 멈추는 것은 모두 같으므로 구체화
+// 異붿긽�솕 �겢�옒�뒪濡� 怨듯넻湲곕뒫 異붿텧
+// 紐⑤뱺 �쑀�떅�� �씠�룞�빐�빞�븯�뒗 醫뚰몴媛� �떎瑜닿린 �븣臾몄뿉 異붿긽�솕
+// 硫덉텛�뒗 寃껋� 紐⑤몢 媛숈쑝誘�濡� 援ъ껜�솕
 abstract class Unit {
     int x, y;
 
-    abstract void move(int x, int y); // 필수 기능으로 추상 메서드 구현
-    void stop() { System.out.println("stop"); } // 추상 메서드는 아니지만 공통 기능이므로 추상 클래스에 구현
+    abstract void move(int x, int y); // �븘�닔 湲곕뒫�쑝濡� 異붿긽 硫붿꽌�뱶 援ы쁽
+    void stop() { System.out.println("stop"); } // 異붿긽 硫붿꽌�뱶�뒗 �븘�땲吏�留� 怨듯넻 湲곕뒫�씠誘�濡� 異붿긽 �겢�옒�뒪�뿉 援ы쁽
 }
 
-// 중복 코드 발생으로 추상 클래스로 공통으로 뺄 수 있다.
+// 以묐났 肄붾뱶 諛쒖깮�쑝濡� 異붿긽 �겢�옒�뒪濡� 怨듯넻�쑝濡� 類� �닔 �엳�떎.
 // int x, y
 // move()
 // stop()
-//class Marine { // 추상화 전
-    class Marine extends Unit { // 추상화 후
+//class Marine { // 異붿긽�솕 �쟾
+    class Marine extends Unit { // 異붿긽�솕 �썑
 
-    // 추상화 전
+    // 異붿긽�솕 �쟾
     //
-//    int x, y; // 현재위치
+//    int x, y; // �쁽�옱�쐞移�
 //    void move(int x, int y) { System.out.println("Marine move"); }
 //    void stop () { System.out.println("stop"); }
 
-    // 추상화 후
-    // 추상화를 여 반드시 구현하도록
+    // 異붿긽�솕 �썑
+    // 異붿긽�솕瑜� �뿬 諛섎뱶�떆 援ы쁽�븯�룄濡�
     @Override
     void move(int x, int y) { System.out.println("Marine move"); }
 
@@ -59,11 +59,11 @@ abstract class Unit {
 //class Tank {
     class Tank extends Unit {
 
-//    int x, y; // 현재위치
+//    int x, y; // �쁽�옱�쐞移�
 //    void move(int x, int y) { System.out.println("Tank move"); }
 //    void stop () { System.out.println("stop"); }
 
-    // 추상화 후
+    // 異붿긽�솕 �썑
     @Override
     void move(int x, int y) { System.out.println("Tank move"); }
 
@@ -73,11 +73,11 @@ abstract class Unit {
 //class DropShip {
     class DropShip extends Unit {
 
-//    int x, y; // 현재위치
+//    int x, y; // �쁽�옱�쐞移�
 //    void move(int x, int y) { System.out.println("DropShip move"); }
 //    void stop () { System.out.println("stop"); }
 
-    // 추상화 후
+    // 異붿긽�솕 �썑
     @Override
     void move(int x, int y) { System.out.println("DropShip move"); }
 
